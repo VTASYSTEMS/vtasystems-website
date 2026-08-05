@@ -19,11 +19,9 @@ body{
   overflow-x: hidden;
 }
 
-/* ======================================================
-   THANH CHỮ CHẠY NGANG (TICKER MARQUEE - PHONG CÁCH JBL)
-   ====================================================== */
+/* THANH CHỮ CHẠY NGANG (TICKER MARQUEE) */
 .ticker-bar {
-  background: #e50914; /* Màu đỏ chủ đạo tia sét */
+  background: #e50914;
   color: #fff;
   overflow: hidden;
   white-space: nowrap;
@@ -37,10 +35,9 @@ body{
 .ticker-track {
   display: flex;
   width: max-content;
-  animation: marquee 20s linear infinite;
+  animation: marquee 8s linear infinite;
 }
 
-/* Hiệu ứng tạm dừng khi di chuột vào (tùy chọn) */
 .ticker-bar:hover .ticker-track {
   animation-play-state: paused;
 }
@@ -53,26 +50,20 @@ body{
   padding: 0 30px;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
 }
 
 .ticker-item i {
   font-size: 14px;
-  color: #ffeb3b; /* Icon tia sét màu vàng nổi bật */
+  color: #ffeb3b;
 }
 
 @keyframes marquee {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
 }
 
-/* ======================================================
-   HEADER & NAVIGATION
-   ====================================================== */
+/* HEADER */
 header{
   height: 75px;
   background: #111;
@@ -112,7 +103,7 @@ nav a:hover{
   color: #e50914;
 }
 
-/* Hero Section */
+/* HERO SECTION */
 .hero{
   padding: 80px 20px 50px;
   background: linear-gradient(180deg, #111 0%, #000 100%);
@@ -144,7 +135,7 @@ nav a:hover{
   max-width: 650px;
 }
 
-/* Banner Thông Điệp Thương Hiệu (Nền Đỏ Tia Sét) */
+/* BRAND BANNER */
 .brand-statement {
   background: linear-gradient(135deg, #e50914 0%, #b30710 100%);
   color: #ffffff;
@@ -174,7 +165,7 @@ nav a:hover{
   font-weight: 400;
 }
 
-/* Section Sản Phẩm */
+/* PRODUCTS SECTION */
 .products-section {
   padding: 80px 40px;
   max-width: 1200px;
@@ -218,14 +209,45 @@ nav a:hover{
   border-color: #e50914;
   box-shadow: 0 10px 25px rgba(229, 9, 20, 0.25);
 }
-.product-image {
+
+/* SLIDER XEM ẢNH */
+.product-slider-wrapper {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.product-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  border-radius: 8px;
+  background: #080808;
+  padding: 10px 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.product-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.product-slider img {
+  flex: 0 0 100%;
   width: 100%;
   height: 280px;
   object-fit: contain;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  background: #080808;
-  padding: 10px;
+  scroll-snap-align: start;
+}
+
+.swipe-hint {
+  font-size: 12px;
+  color: #e50914;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
 .product-brand {
@@ -250,11 +272,34 @@ nav a:hover{
   text-transform: uppercase;
 }
 
-.product-card p {
-  color: #aaa;
-  font-size: 15px;
-  line-height: 1.5;
+/* THÔNG SỐ KỸ THUẬT DANH SÁCH BAN ĐẦU */
+.tech-specs {
+  text-align: left;
+  background: #0d0d0d;
+  padding: 12px;
+  border-radius: 6px;
   margin-bottom: 20px;
+  border: 1px solid #1f1f1f;
+}
+
+.tech-specs li {
+  list-style: none;
+  font-size: 13px;
+  color: #ccc;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tech-specs li:last-child {
+  margin-bottom: 0;
+}
+
+.tech-specs i {
+  color: #e50914;
+  width: 16px;
+  text-align: center;
 }
 
 .button{
@@ -273,7 +318,7 @@ nav a:hover{
   box-shadow: 0 4px 12px rgba(229, 9, 20, 0.4);
 }
 
-/* Footer Chi Tiết */
+/* FOOTER */
 footer {
   background: #080808;
   border-top: 1px solid #222;
@@ -384,20 +429,62 @@ footer {
   <h2 class="section-title">Danh Sách <span>Mẫu Loa</span></h2>
   
   <div class="product-grid">
+
     <div class="product-card">
       <div>
-        <img src="leviathan-x4.jpg" alt="VTA Systems LEVIATHAN X4" class="product-image">
+        <div class="product-slider-wrapper">
+          <div class="product-slider">
+            <img src="dravox-one.png" alt="DRAVOX One - Góc chính">
+            <img src="dravox-1.png" alt="DRAVOX One - Góc nghiêng">
+            <img src="dravox-2.png" alt="DRAVOX One - Mặt sau">
+          </div>
+        </div>
+        <div class="swipe-hint"><i class="fa-solid fa-hand-pointer"></i> Vuốt ngang để xem thêm hình</div>
         <div class="product-brand">VTA Systems</div>
-        <h3>LEVIATHAN X4</h3>
-        <div class="tagline">Siêu Bass & Tản Nhiệt LED RGB</div>
-        <p>Loa công suất lớn với dàn quạt tản nhiệt LED RGB lộ cơ qua mặt kính trong suốt, vỏ xám xi-măng thể thao độc đáo.</p>
+        <h3>DRAVOX One</h3>
+        <div class="tagline">Thiết Kế Độc Bản & Sound Control</div>
+        
+        <ul class="tech-specs">
+          <li><i class="fa-solid fa-bolt"></i> <strong>Công suất:</strong> 140W</li>
+          <li><i class="fa-solid fa-bullhorn"></i> <strong>Cấu hình loa:</strong> 2 Bass 3.5 inch</li>
+          <li><i class="fa-solid fa-wifi"></i> <strong>Kết nối:</strong> Chip Bluetooth MV SILICON</li>
+          <li><i class="fa-solid fa-ruler-combined"></i> <strong>Kích thước:</strong> 320 × 175 × 190 mm</li>
+        </ul>
       </div>
-      <a class="button" href="#">Xem Thông Số</a>
+      <a class="button" href="#">Xem Chi Tiết</a>
     </div>
 
     <div class="product-card">
       <div>
-        <img src="vortex-x3.jpg" alt="VTA Systems VORTEX X3" class="product-image">
+        <div class="product-slider-wrapper">
+          <div class="product-slider">
+            <img src="leviathan-x4.jpg" alt="LEVIATHAN X4">
+          </div>
+        </div>
+        <div class="product-brand">VTA Systems</div>
+        <h3>LEVIATHAN X4</h3>
+        <div class="tagline">Quái Vật Công Suất 1500W</div>
+        
+        <ul class="tech-specs">
+          <li><i class="fa-solid fa-bolt"></i> <strong>Công suất:</strong> 1500W</li>
+          <li><i class="fa-solid fa-microchip"></i> <strong>Mạch khuếch đại:</strong> IC TPA 3255</li>
+          <li><i class="fa-solid fa-lightbulb"></i> <strong>Hiệu ứng:</strong> LED ARGB</li>
+          <li><i class="fa-solid fa-ruler-combined"></i> <strong>Kích thước:</strong> 655 × 415 × 372 mm</li>
+        </ul>
+      </div>
+      <a class="button" href="#">Xem Chi Tiết</a>
+    </div>
+
+    <div class="product-card">
+      <div>
+        <div class="product-slider-wrapper">
+          <div class="product-slider">
+            <img src="vortex-x3.jpg" alt="VORTEX X3 - Góc chính">
+            <img src="vortex-1.jpg" alt="VORTEX X3 - Góc nghiêng">
+            <img src="vortex-2.jpg" alt="VORTEX X3 - Chi tiết">
+          </div>
+        </div>
+        <div class="swipe-hint"><i class="fa-solid fa-hand-pointer"></i> Vuốt ngang để xem thêm hình</div>
         <div class="product-brand">VTA Systems</div>
         <h3>VORTEX X3</h3>
         <div class="tagline">Thiết Kế Tối Giản & Âm Thanh Chi Tiết</div>
@@ -405,6 +492,7 @@ footer {
       </div>
       <a class="button" href="#">Xem Thông Số</a>
     </div>
+
   </div>
 </section>
 
