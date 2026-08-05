@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+LEVIATHAN X4 | VTA SYSTEMS
+</title>
+
+
+<link rel="stylesheet"
+href="../style.css">
+
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap"
+rel="stylesheet">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+
+<span class="logo-red">
+VTA
+</span>
+
+<span class="logo-white">
+SYSTEMS
+</span>
+
+</div>
+
+
+<nav>
+
+<a href="../index.html">
+HOME
+</a>
+
+<a href="../index.html#products">
+PRODUCTS
+</a>
+
+<a href="../index.html#contact">
+CONTACT
+</a>
+
+</nav>
+
+
+</header>
+
+
+
+<section class="product-detail">
+
+
+<div class="container">
+
+
+<div class="product-image">
+
+
+<img src="../images/leviathan/cover.jpg"
+alt="LEVIATHAN X4">
+
+
+</div>
+
+
+
+<div class="product-info">
+
+
+<h1>
+
+LEVIATHAN X4
+
+</h1>
+
+
+<h2>
+
+THE POWER OF BANDPASS
+
+</h2>
+
+
+<p>
+
+Một hệ thống loa di động hiệu suất cao
+được thiết kế bởi VTA SYSTEMS.
+Kết hợp thiết kế Bandpass mạnh mẽ,
+DSP xử lý âm thanh và bộ khuếch đại công suất cao.
+
+</p>
+
+<a class="hero-button"
+href="../index.html">
+
+BACK TO HOME
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+<section class="spec-section">
+
+<div class="container">
+
+
+<h2>
+
+LEVIATHAN X4 SPECIFICATIONS
+
+</h2>
+
+
+
+<div class="spec-grid">
+
+
+<div class="detail-card">
+
+<i class="fa-solid fa-bolt"></i>
+
+<h3>
+POWER
+</h3>
+
+<p>
+1500W Maximum Output
+</p>
+
+</div>
+
+
+
+<div class="detail-card">
+
+<i class="fa-solid fa-microchip"></i>
+
+<h3>
+AMPLIFIER
+</h3>
+
+<p>
+TPA3255 High Performance Class-D
+</p>
+
+</div>
+
+
+
+<div class="detail-card">
+
+<i class="fa-solid fa-wave-square"></i>
+
+<h3>
+SYSTEM
+</h3>
+
+<p>
+4 Way Bandpass Audio System
+</p>
+
+</div>
+
+
+
+<div class="detail-card">
+
+<i class="fa-solid fa-battery-full"></i>
+
+<h3>
+BATTERY
+</h3>
+
+<p>
+9S4P High Current Battery Pack
+</p>
+
+</div>
+
+
+
+<div class="detail-card">
+
+<i class="fa-solid fa-sliders"></i>
+
+<h3>
+DSP
+</h3>
+
+<p>
+Digital Sound Processing Tuning
+</p>
+
+</div>
+
+
+
+<div class="detail-card">
+
+<i class="fa-solid fa-volume-high"></i>
+
+<h3>
+DRIVER
+</h3>
+
+<p>
+Sub + Bass + Mid + Treble
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<section class="description-section">
+
+
+<div class="container">
+
+
+<h2>
+
+ENGINEERED FOR POWER
+
+</h2>
+
+
+<p>
+
+LEVIATHAN X4 không chỉ là một chiếc loa kéo.
+Đây là một hệ thống âm thanh di động dạng loa tủ,
+được thiết kế dành cho những người yêu thích
+âm lượng lớn, bass sâu và trải nghiệm âm thanh mạnh mẽ.
+
+</p>
+
+
+<p>
+
+Thiết kế Bandpass giúp tối ưu năng lượng dải trầm,
+kết hợp cùng DSP để kiểm soát âm thanh chính xác,
+cho khả năng trình diễn mạnh mẽ trong không gian lớn.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<footer>
+
+
+<div class="container">
+
+
+<div class="footer-logo">
+
+VTA SYSTEMS
+
+</div>
+
+
+<p>
+
+LEVIATHAN X4
+HIGH PERFORMANCE DIY AUDIO
+
+</p>
+
+
+<p class="copyright">
+
+© 2026 VTA SYSTEMS.
+All Rights Reserved.
+
+</p>
+
+
+</div>
+
+
+</footer>
+
+
+
+<script src="../script.js"></script>
+
+
+</body>
+
+
+</html>
