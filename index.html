@@ -1,526 +1,490 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VTA Systems | Loa DIY Công Suất Cao</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-body{
-  background: #0b0b0b;
-  color: white;
-  overflow-x: hidden;
-}
+    <title>VTA SYSTEMS | High Performance DIY Audio</title>
 
-/* THANH CHỮ CHẠY NGANG (TICKER MARQUEE) */
-.ticker-bar {
-  background: #e50914;
-  color: #fff;
-  overflow: hidden;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  display: flex;
-  align-items: center;
-}
+    <meta name="description"
+          content="VTA SYSTEMS - High Performance DIY Audio">
 
-.ticker-track {
-  display: flex;
-  width: max-content;
-  animation: marquee 8s linear infinite;
-}
+    <link rel="stylesheet"
+          href="style.css">
 
-.ticker-bar:hover .ticker-track {
-  animation-play-state: paused;
-}
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-.ticker-item {
-  font-size: 15px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding: 0 30px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-.ticker-item i {
-  font-size: 14px;
-  color: #ffeb3b;
-}
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
 
-@keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
-}
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-/* HEADER */
-header{
-  height: 75px;
-  background: #111;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 50px;
-  border-bottom: 2px solid #222;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.logo{
-  font-size: 26px;
-  font-weight: 900;
-  color: #fff;
-  letter-spacing: 2px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.logo span {
-  color: #e50914;
-}
-
-nav a{
-  color: white;
-  text-decoration: none;
-  margin-left: 30px;
-  font-weight: 600;
-  transition: .3s;
-}
-
-nav a:hover{
-  color: #e50914;
-}
-
-/* HERO SECTION */
-.hero{
-  padding: 80px 20px 50px;
-  background: linear-gradient(180deg, #111 0%, #000 100%);
-  text-align: center;
-}
-
-.hero h1{
-  font-size: 55px;
-  font-weight: 900;
-  color: #fff;
-  letter-spacing: 3px;
-}
-
-.hero h1 span {
-  color: #e50914;
-}
-
-.hero h2{
-  font-size: 22px;
-  margin-top: 10px;
-  color: #ccc;
-  font-weight: 500;
-}
-
-.hero p{
-  margin: 15px auto 0;
-  color: #888;
-  font-size: 17px;
-  max-width: 650px;
-}
-
-/* BRAND BANNER */
-.brand-statement {
-  background: linear-gradient(135deg, #e50914 0%, #b30710 100%);
-  color: #ffffff;
-  padding: 70px 20px;
-  text-align: center;
-}
-
-.brand-statement-container {
-  max-width: 850px;
-  margin: 0 auto;
-}
-
-.brand-statement h2 {
-  font-size: 36px;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  line-height: 1.25;
-  margin-bottom: 25px;
-}
-
-.brand-statement p {
-  font-size: 18px;
-  line-height: 1.7;
-  color: #fff;
-  opacity: 0.95;
-  font-weight: 400;
-}
-
-/* PRODUCTS SECTION */
-.products-section {
-  padding: 80px 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 36px;
-  font-weight: 800;
-  color: #fff;
-  margin-bottom: 50px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.section-title span {
-  color: #e50914;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 40px;
-}
-
-.product-card {
-  background: #141414;
-  border: 1px solid #222;
-  border-radius: 12px;
-  padding: 25px;
-  text-align: center;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.product-card:hover {
-  transform: translateY(-8px);
-  border-color: #e50914;
-  box-shadow: 0 10px 25px rgba(229, 9, 20, 0.25);
-}
-
-/* SLIDER XEM ẢNH */
-.product-slider-wrapper {
-  position: relative;
-  margin-bottom: 15px;
-}
-
-.product-slider {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  border-radius: 8px;
-  background: #080808;
-  padding: 10px 0;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.product-slider::-webkit-scrollbar {
-  display: none;
-}
-
-.product-slider img {
-  flex: 0 0 100%;
-  width: 100%;
-  height: 280px;
-  object-fit: contain;
-  scroll-snap-align: start;
-}
-
-.swipe-hint {
-  font-size: 12px;
-  color: #e50914;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-
-.product-brand {
-  font-size: 13px;
-  color: #777;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  margin-bottom: 4px;
-}
-
-.product-card h3 {
-  font-size: 26px;
-  color: #fff;
-  margin-bottom: 8px;
-}
-
-.product-card .tagline {
-  color: #e50914;
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 12px;
-  text-transform: uppercase;
-}
-
-/* THÔNG SỐ KỸ THUẬT DANH SÁCH BAN ĐẦU */
-.tech-specs {
-  text-align: left;
-  background: #0d0d0d;
-  padding: 12px;
-  border-radius: 6px;
-  margin-bottom: 20px;
-  border: 1px solid #1f1f1f;
-}
-
-.tech-specs li {
-  list-style: none;
-  font-size: 13px;
-  color: #ccc;
-  margin-bottom: 6px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.tech-specs li:last-child {
-  margin-bottom: 0;
-}
-
-.tech-specs i {
-  color: #e50914;
-  width: 16px;
-  text-align: center;
-}
-
-.button{
-  display: inline-block;
-  padding: 12px 30px;
-  background: #e50914;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-.button:hover{
-  background: #ff1e27;
-  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.4);
-}
-
-/* FOOTER */
-footer {
-  background: #080808;
-  border-top: 1px solid #222;
-  padding: 60px 40px 20px;
-  color: #bbb;
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 40px;
-}
-
-.footer-col h4 {
-  color: #fff;
-  font-size: 16px;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-  letter-spacing: 1px;
-}
-
-.footer-col ul {
-  list-style: none;
-}
-
-.footer-col ul li {
-  margin-bottom: 12px;
-}
-
-.footer-col ul li a {
-  color: #aaa;
-  text-decoration: none;
-  font-size: 14px;
-  transition: color 0.3s ease;
-}
-
-.footer-col ul li a:hover {
-  color: #e50914;
-}
-
-.footer-bottom {
-  max-width: 1200px;
-  margin: 40px auto 0;
-  padding-top: 20px;
-  border-top: 1px solid #1a1a1a;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-brand-logo {
-  font-size: 28px;
-  font-weight: 900;
-  color: #222;
-  letter-spacing: 4px;
-}
-
-@media (max-width: 768px) {
-  header { padding: 0 20px; }
-  nav { display: none; }
-  .hero h1 { font-size: 36px; }
-  .ticker-item { font-size: 13px; padding: 0 15px; }
-}
-</style>
 </head>
+
 <body>
 
-<div class="ticker-bar">
-  <div class="ticker-track">
-    <div class="ticker-item"><i class="fa-solid fa-bolt"></i> CHÍNH HÃNG TẠI VTASYSTEMS.VN</div>
-    <div class="ticker-item"><i class="fa-solid fa-bolt"></i> MIỄN PHÍ VẬN CHUYỂN TOÀN QUỐC</div>
-    <div class="ticker-item"><i class="fa-solid fa-bolt"></i> ÂM THANH DIY CÔNG SUẤT CAO</div>
-    <div class="ticker-item"><i class="fa-solid fa-bolt"></i> BẢO HÀNH CHÍNH HÃNG 12 THÁNG</div>
+<div class="topbar">
 
-    <div class="ticker-item"><i class="fa-solid fa-bolt"></i> CHÍNH HÃNG TẠI VTASYSTEMS.VN</div>
-    <div class="ticker-item"><i class="fa-solid fa-bolt"></i> MIỄN PHÍ VẬN CHUYỂN TOÀN QUỐC</div>
-    <div class="ticker-item"><i class="fa-solid fa-bolt"></i> ÂM THANH DIY CÔNG SUẤT CAO</div>
-    <div class="ticker-item"><i class="fa-solid fa-bolt"></i> BẢO HÀNH CHÍNH HÃNG 12 THÁNG</div>
-  </div>
+    <div class="topbar-track">
+
+        <span>
+            <i class="fa-solid fa-bolt"></i>
+            HIGH PERFORMANCE DIY AUDIO
+        </span>
+
+        <span>
+            <i class="fa-solid fa-truck-fast"></i>
+            FREE SHIPPING
+        </span>
+
+        <span>
+            <i class="fa-solid fa-shield"></i>
+            WARRANTY 12 MONTHS
+        </span>
+
+        <span>
+            <i class="fa-solid fa-music"></i>
+            DESIGNED BY VTA SYSTEMS
+        </span>
+
+    </div>
+
 </div>
 
 <header>
-  <div class="logo">VTA <span><i class="fa-solid fa-bolt"></i></span> SYSTEMS</div>
-  <nav>
-    <a href="#home">Trang chủ</a>
-    <a href="#products">Sản phẩm</a>
-    <a href="#about">Về VTA</a>
-    <a href="#contact">Liên hệ</a>
-  </nav>
+
+    <div class="logo">
+
+        <span class="logo-red">
+            VTA
+        </span>
+
+        <span class="logo-white">
+            SYSTEMS
+        </span>
+
+    </div>
+
+    <nav>
+
+        <a href="#home">
+            HOME
+        </a>
+
+        <a href="#products">
+            PRODUCTS
+        </a>
+
+        <a href="#technology">
+            TECHNOLOGY
+        </a>
+
+        <a href="#about">
+            ABOUT
+        </a>
+
+        <a href="#contact">
+            CONTACT
+        </a>
+
+    </nav>
+
 </header>
 
-<section class="hero" id="home">
-  <h1>VTA <span>SYSTEMS</span></h1>
-  <h2>Dòng Loa DIY Thiết Kế & Công Suất Cao</h2>
-  <p>Tối ưu âm học chuẩn xác, dải bass uy lực, tích hợp mạch xử lý âm thanh chuyên nghiệp.</p>
+<section
+class="hero"
+id="home">
+
+<div class="hero-overlay">
+
+<h1>
+
+LEVIATHAN X4
+
+</h1>
+
+<h2>
+
+THE POWER OF BANDPASS
+
+</h2>
+
+<p>
+
+Designed and Engineered by VTA SYSTEMS
+
+</p>
+
+<a
+href="#products"
+class="hero-button">
+
+DISCOVER
+
+</a>
+
+</div>
+
+</section>
+<section
+class="brand-intro">
+
+<div class="container">
+
+<div class="brand-left">
+
+<h2>
+
+CHẤT ÂM ĐƯỢC CHẾ TÁC
+
+CHO NHỮNG NGƯỜI ĐAM MÊ
+
+</h2>
+
+<p>
+
+VTA SYSTEMS tập trung phát triển những mẫu loa DIY cao cấp
+với thiết kế độc quyền, tối ưu âm học và hiệu suất thực tế.
+
+</p>
+
+<p>
+
+Mỗi sản phẩm đều được tinh chỉnh thủ công để đạt chất âm
+mạnh mẽ, chi tiết và khác biệt.
+
+</p>
+
+</div>
+
+<div class="brand-right">
+
+<div class="spec-card">
+
+<h3>
+
+DIY AUDIO
+
+</h3>
+
+<span>
+
+Professional Design
+
+</span>
+
+</div>
+
+<div class="spec-card">
+
+<h3>
+
+DSP
+
+</h3>
+
+<span>
+
+High Resolution
+
+</span>
+
+</div>
+
+<div class="spec-card">
+
+<h3>
+
+TPA3255
+
+</h3>
+
+<span>
+
+High Power Amplifier
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section class="brand-statement">
-  <div class="brand-statement-container">
-    <h2>CHẤT ÂM VTA SYSTEMS<br>ĐẬM CHẤT BẢN LĨNH DIY</h2>
-    <p>Sản phẩm của VTA Systems được chế tác dành riêng cho những ai đam mê âm thanh sống động và khác biệt. Từng đường nét thiết kế, dải bass uy lực đến hệ thống tản nhiệt độc bản đều được tối ưu tỉ mỉ. Dù ở bất cứ không gian nào, VTA Systems luôn mang đến trải nghiệm âm thanh đỉnh cao, định hình cá tính và làm chủ mọi cuộc vui.</p>
-  </div>
+<section
+class="products"
+id="products">
+
+<div class="container">
+
+<h2>
+
+PRODUCT LINEUP
+
+</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+
+<img
+src="images/leviathan/cover.jpg"
+alt="LEVIATHAN X4">
+
+<h3>
+
+LEVIATHAN X4
+
+</h3>
+
+<p>
+
+Bandpass 2.1
+
+4 Way
+
+1500W
+
+</p>
+
+<a
+href="products/leviathan-x4.html">
+
+VIEW PRODUCT
+
+</a>
+
+</div>
+
+<div class="product-card">
+
+<img
+src="images/vortex/cover.jpg"
+alt="VORTEX X3">
+
+<h3>
+
+VORTEX X3
+
+</h3>
+
+<p>
+
+Bookshelf
+
+3 Way
+
+HiFi
+
+</p>
+
+<a
+href="products/vortex-x3.html">
+
+VIEW PRODUCT
+
+</a>
+
+</div>
+
+<div class="product-card">
+
+<img
+src="images/dravox/cover.jpg"
+alt="DRAVOX ONE">
+
+<h3>
+
+DRAVOX ONE
+
+</h3>
+
+<p>
+
+Desktop Speaker
+
+Premium DIY
+
+</p>
+
+<a
+href="products/dravox-one.html">
+
+VIEW PRODUCT
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section
+class="technology"
+id="technology">
+
+<div class="container">
+
+<h2>
+
+VTA TECHNOLOGY
+
+</h2>
+
+<div class="tech-grid">
+
+<div class="tech-item">
+
+<i class="fa-solid fa-microchip"></i>
+
+<h3>
+
+DSP AUDIO
+
+</h3>
+
+<p>
+
+Digital Signal Processing
+tối ưu dải tần.
+
+</p>
+
+</div>
+
+<div class="tech-item">
+
+<i class="fa-solid fa-wave-square"></i>
+
+<h3>
+
+BANDPASS
+
+</h3>
+
+<p>
+
+Thiết kế Bandpass
+độc quyền của VTA.
+
+</p>
+
+</div>
+
+<div class="tech-item">
+
+<i class="fa-solid fa-volume-high"></i>
+
+<h3>
+
+HIGH POWER
+
+</h3>
+
+<p>
+
+TPA3255
+Hiệu suất cao.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section class="products-section" id="products">
-  <h2 class="section-title">Danh Sách <span>Mẫu Loa</span></h2>
-  
-  <div class="product-grid">
+<section
+class="about"
+id="about">
 
-    <div class="product-card">
-      <div>
-        <div class="product-slider-wrapper">
-          <div class="product-slider">
-            <img src="dravox-one.png" alt="DRAVOX One - Góc chính">
-            <img src="dravox-1.png" alt="DRAVOX One - Góc nghiêng">
-            <img src="dravox-2.png" alt="DRAVOX One - Mặt sau">
-          </div>
-        </div>
-        <div class="swipe-hint"><i class="fa-solid fa-hand-pointer"></i> Vuốt ngang để xem thêm hình</div>
-        <div class="product-brand">VTA Systems</div>
-        <h3>DRAVOX One</h3>
-        <div class="tagline">Thiết Kế Độc Bản & Sound Control</div>
-        
-        <ul class="tech-specs">
-          <li><i class="fa-solid fa-bolt"></i> <strong>Công suất:</strong> 140W</li>
-          <li><i class="fa-solid fa-bullhorn"></i> <strong>Cấu hình loa:</strong> 2 Bass 3.5 inch</li>
-          <li><i class="fa-solid fa-wifi"></i> <strong>Kết nối:</strong> Chip Bluetooth MV SILICON</li>
-          <li><i class="fa-solid fa-ruler-combined"></i> <strong>Kích thước:</strong> 320 × 175 × 190 mm</li>
-        </ul>
-      </div>
-      <a class="button" href="#">Xem Chi Tiết</a>
-    </div>
+<div class="container">
 
-    <div class="product-card">
-      <div>
-        <div class="product-slider-wrapper">
-          <div class="product-slider">
-            <img src="leviathan-x4.jpg" alt="LEVIATHAN X4">
-          </div>
-        </div>
-        <div class="product-brand">VTA Systems</div>
-        <h3>LEVIATHAN X4</h3>
-        <div class="tagline">Quái Vật Công Suất 1500W</div>
-        
-        <ul class="tech-specs">
-          <li><i class="fa-solid fa-bolt"></i> <strong>Công suất:</strong> 1500W</li>
-          <li><i class="fa-solid fa-microchip"></i> <strong>Mạch khuếch đại:</strong> IC TPA 3255</li>
-          <li><i class="fa-solid fa-lightbulb"></i> <strong>Hiệu ứng:</strong> LED ARGB</li>
-          <li><i class="fa-solid fa-ruler-combined"></i> <strong>Kích thước:</strong> 655 × 415 × 372 mm</li>
-        </ul>
-      </div>
-      <a class="button" href="#">Xem Chi Tiết</a>
-    </div>
+<h2>
 
-    <div class="product-card">
-      <div>
-        <div class="product-slider-wrapper">
-          <div class="product-slider">
-            <img src="vortex-x3.jpg" alt="VORTEX X3 - Góc chính">
-            <img src="vortex-1.jpg" alt="VORTEX X3 - Góc nghiêng">
-            <img src="vortex-2.jpg" alt="VORTEX X3 - Chi tiết">
-          </div>
-        </div>
-        <div class="swipe-hint"><i class="fa-solid fa-hand-pointer"></i> Vuốt ngang để xem thêm hình</div>
-        <div class="product-brand">VTA Systems</div>
-        <h3>VORTEX X3</h3>
-        <div class="tagline">Thiết Kế Tối Giản & Âm Thanh Chi Tiết</div>
-        <p>Kiểu dáng để bàn bo góc hiện đại, cấu hình đa củ loa cho âm thanh chân thực, nhỏ gọn phù hợp mọi không gian.</p>
-      </div>
-      <a class="button" href="#">Xem Thông Số</a>
-    </div>
+ABOUT VTA SYSTEMS
 
-  </div>
+</h2>
+
+<p>
+
+VTA SYSTEMS là thương hiệu DIY Audio
+được xây dựng với mục tiêu tạo ra những
+hệ thống loa hiệu suất cao, thiết kế đẹp,
+âm thanh mạnh mẽ và khác biệt.
+
+</p>
+
+</div>
+
 </section>
 
-<footer>
-  <div class="footer-container">
-    <div class="footer-col">
-      <h4>HỖ TRỢ</h4>
-      <ul>
-        <li><a href="#">Hướng dẫn đặt hàng</a></li>
-        <li><a href="#">Hướng dẫn bảo hành</a></li>
-        <li><a href="#">Trở thành đại lý</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>VỀ CHÚNG TÔI</h4>
-      <ul>
-        <li><a href="#">Giới thiệu VTA Systems</a></li>
-        <li><a href="#">Chính sách bảo hành</a></li>
-        <li><a href="#">Chính sách bảo mật</a></li>
-      </ul>
-    </div>
-  </div>
+<footer
+id="contact">
 
-  <div class="footer-bottom">
-    <div class="footer-brand-logo">VTA SYSTEMS</div>
-    <p>&copy; 2026 VTA Systems. Tất cả quyền được bảo lưu.</p>
-  </div>
+<div class="container">
+
+<div class="footer-logo">
+
+VTA SYSTEMS
+
+</div>
+
+<p>
+
+High Performance DIY Audio
+
+</p>
+
+<div class="footer-social">
+
+<a href="#">
+
+<i class="fa-brands fa-facebook-f"></i>
+
+</a>
+
+<a href="#">
+
+<i class="fa-brands fa-youtube"></i>
+
+</a>
+
+<a href="#">
+
+<i class="fa-brands fa-github"></i>
+
+</a>
+
+</div>
+
+<p class="copyright">
+
+© 2026 VTA SYSTEMS.
+All Rights Reserved.
+
+</p>
+
+</div>
+
 </footer>
 
+<script src="script.js"></script>
+
 </body>
+
 </html>
